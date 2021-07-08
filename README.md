@@ -12,27 +12,35 @@ When creating the genesis block I chose the the 'Proof of Authority' (POA) conse
 ![](screenshots/POA.png)
 
 Finally both nodes were initialized into "mynet" using geth.
+
 ![](screenshots/initializing.png)
 
 ## Starting the Blockchain:
 
 Now that the chain's engineering is complete the next step was to enable "mynet" to run.  To launch the first node into mining mode and configured enabled RPC which will allow it work in apps such as MyCrypto.
+
 ![](screenshots/live_1.png)
 
 To enable the second node into the chain I again used geth but created the port number 30304 (the next port number in the chain) and attached it to the first node using bootnodes and node 1's enode.  I also configured node 2 with the ability to mine.
+
 ![](screenshots/live_2.png)
 
 ## Testing "Mynet" Transactions
 
 With the network live and mining the final step is to test "mynet" and see its ability to send transactions between nodes.  To do so I used MyCrypto to add the "mynet" netowrk having it connect through the local url.
+
 ![](screenshots/network.png)
+
 Next I unlocked the wallet using the node 1's keystore.  Node one was used because it was RPC enabled
+
 ![](screenshots/keystore.png)
 
 After unlocking the wallet it is time to test the transactions.  As a test 1000 ETH were sent from node 1's address to node 2's adress. 
+
 ![](screenshots/send.png)
 
 The hash number was then used to check the transaction.
+
 ![](screenshots/transaction.png)
 
 The transaction was a success!  The network is working smoothly as shown by the transaction status 
